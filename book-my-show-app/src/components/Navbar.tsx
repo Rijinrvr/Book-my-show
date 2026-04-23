@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { Film, LogOut, User, LayoutDashboard, Shield } from 'lucide-react';
+import { Film, LogOut, User, LayoutDashboard, Shield, Ticket } from 'lucide-react';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -22,23 +22,26 @@ export default function Navbar() {
 
       <div className="navbar-links">
         {user ? (
-        <>
-            <Link
-              href="/movies"
-              className="btn-ghost"
-            >
+          <>
+            <Link href="/movies" className="btn-ghost">
               <Film size={16} /> Movies
             </Link>
-            <Link
-              href={user.role === 'admin' ? '/admin' : '/dashboard'}
-              className="btn-ghost"
-            >
-              {user.role === 'admin' ? (
-                <><Shield size={16} /> Admin</>
-              ) : (
-                <><LayoutDashboard size={16} /> Dashboard</>
-              )}
-            </Link>
+
+            {user.role === 'admin' ? (
+              <Link href="/admin" className="btn-ghost">
+                <Shield size={16} /> Admin
+              </Link>
+            ) : (
+              <>
+                <Link href="/dashboard" className="btn-ghost">
+                  <LayoutDashboard size={16} /> Dashboard
+                </Link>
+                <Link href="/bookings" className="btn-ghost">
+                  <Ticket size={16} /> My Bookings
+                </Link>
+              </>
+            )}
+
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '13px', padding: '6px 12px', borderRadius: '8px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border)' }}>
               <User size={14} />
               <span>{user.name}</span>
