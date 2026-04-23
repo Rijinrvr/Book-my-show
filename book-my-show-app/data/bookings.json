@@ -70,5 +70,22 @@
     "paymentStatus": "confirmed",
     "bookingDate": "2026-04-23T06:33:38.328Z",
     "bookingRef": "BMS26018328"
+  },
+  {
+    "id": "booking-1776926555695-0ca8ts8br",
+    "userId": "user-001",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "showId": "show-005",
+    "movieId": "movie-002",
+    "theaterId": "theater-002",
+    "seats": [
+      "D5",
+      "D6"
+    ],
+    "totalAmount": 700,
+    "paymentStatus": "confirmed",
+    "bookingDate": "2026-04-23T06:42:35.695Z",
+    "bookingRef": "BMS26555695"
   }
 ]

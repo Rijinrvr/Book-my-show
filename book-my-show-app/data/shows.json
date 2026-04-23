@@ -74,8 +74,11 @@
     "price": 350,
     "language": "English",
     "format": "2D",
-    "availableSeats": 100,
-    "bookedSeats": []
+    "availableSeats": 98,
+    "bookedSeats": [
+      "D5",
+      "D6"
+    ]
   },
   {
     "id": "show-006",
