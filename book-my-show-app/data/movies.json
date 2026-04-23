@@ -1,0 +1,72 @@
+[
+  {
+    "id": "movie-001",
+    "title": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. A breathtaking journey beyond time and space.",
+    "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "genre": ["Sci-Fi", "Drama", "Adventure"],
+    "duration": 169,
+    "rating": 8.6,
+    "language": "English",
+    "releaseDate": "2014-11-07",
+    "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "director": "Christopher Nolan",
+    "status": "active"
+  },
+  {
+    "id": "movie-002",
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.",
+    "poster": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "genre": ["Action", "Sci-Fi", "Adventure"],
+    "duration": 181,
+    "rating": 8.4,
+    "language": "English",
+    "releaseDate": "2019-04-26",
+    "cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+    "director": "Anthony Russo",
+    "status": "active"
+  },
+  {
+    "id": "movie-003",
+    "title": "The Dark Knight",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
+    "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "genre": ["Action", "Crime", "Drama"],
+    "duration": 152,
+    "rating": 9.0,
+    "language": "English",
+    "releaseDate": "2008-07-18",
+    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "director": "Christopher Nolan",
+    "status": "active"
+  },
+  {
+    "id": "movie-004",
+    "title": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "poster": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+    "genre": ["Sci-Fi", "Action", "Thriller"],
+    "duration": 148,
+    "rating": 8.8,
+    "language": "English",
+    "releaseDate": "2010-07-16",
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    "director": "Christopher Nolan",
+    "status": "active"
+  },
+  {
+    "id": "movie-005",
+    "title": "Spider-Man: No Way Home",
+    "description": "With Spider-Man's identity now revealed, Peter Parker asks Doctor Strange for help. When the spell goes wrong, dangerous foes from other worlds appear.",
+    "poster": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "duration": 148,
+    "rating": 8.2,
+    "language": "English",
+    "releaseDate": "2021-12-17",
+    "cast": ["Tom Holland", "Zendaya", "Benedict Cumberbatch"],
+    "director": "Jon Watts",
+    "status": "active"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "show-001",
+    "movieId": "movie-001",
+    "theaterId": "theater-001",
+    "date": "2026-04-24",
+    "time": "10:00 AM",
+    "price": 250,
+    "language": "English",
+    "format": "2D",
+    "availableSeats": 118,
+    "bookedSeats": [
+      "A1",
+      "A2"
+    ]
+  },
+  {
+    "id": "show-002",
+    "movieId": "movie-001",
+    "theaterId": "theater-001",
+    "date": "2026-04-24",
+    "time": "02:00 PM",
+    "price": 300,
+    "language": "English",
+    "format": "3D",
+    "availableSeats": 116,
+    "bookedSeats": [
+      "A1",
+      "A2",
+      "B5",
+      "C3"
+    ]
+  },
+  {
+    "id": "show-003",
+    "movieId": "movie-001",
+    "theaterId": "theater-002",
+    "date": "2026-04-24",
+    "time": "06:00 PM",
+    "price": 400,
+    "language": "English",
+    "format": "IMAX",
+    "availableSeats": 95,
+    "bookedSeats": [
+      "A1",
+      "A2",
+      "A3",
+      "B1",
+      "B2"
+    ]
+  },
+  {
+    "id": "show-004",
+    "movieId": "movie-002",
+    "theaterId": "theater-001",
+    "date": "2026-04-24",
+    "time": "11:00 AM",
+    "price": 350,
+    "language": "English",
+    "format": "3D",
+    "availableSeats": 117,
+    "bookedSeats": [
+      "D5",
+      "D6",
+      "E1"
+    ]
+  },
+  {
+    "id": "show-005",
+    "movieId": "movie-002",
+    "theaterId": "theater-002",
+    "date": "2026-04-24",
+    "time": "03:30 PM",
+    "price": 350,
+    "language": "English",
+    "format": "2D",
+    "availableSeats": 100,
+    "bookedSeats": []
+  },
+  {
+    "id": "show-006",
+    "movieId": "movie-003",
+    "theaterId": "theater-003",
+    "date": "2026-04-24",
+    "time": "09:00 AM",
+    "price": 200,
+    "language": "English",
+    "format": "2D",
+    "availableSeats": 86,
+    "bookedSeats": [
+      "A1",
+      "A2",
+      "D1",
+      "D2"
+    ]
+  },
+  {
+    "id": "show-007",
+    "movieId": "movie-004",
+    "theaterId": "theater-001",
+    "date": "2026-04-25",
+    "time": "06:30 PM",
+    "price": 300,
+    "language": "English",
+    "format": "2D",
+    "availableSeats": 112,
+    "bookedSeats": [
+      "E6",
+      "E13",
+      "E12",
+      "E11",
+      "E10",
+      "E9",
+      "E8",
+      "E7"
+    ]
+  },
+  {
+    "id": "show-008",
+    "movieId": "movie-005",
+    "theaterId": "theater-002",
+    "date": "2026-04-25",
+    "time": "09:30 PM",
+    "price": 350,
+    "language": "English",
+    "format": "4DX",
+    "availableSeats": 97,
+    "bookedSeats": [
+      "A1",
+      "B3",
+      "C5"
+    ]
+  }
+]

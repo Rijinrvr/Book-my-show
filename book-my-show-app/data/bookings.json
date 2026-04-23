@@ -1,0 +1,74 @@
+[
+  {
+    "id": "booking-1776922422872-epj0fom1x",
+    "userId": "user-001",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "showId": "show-001",
+    "movieId": "movie-001",
+    "theaterId": "theater-001",
+    "seats": [
+      "A1"
+    ],
+    "totalAmount": 250,
+    "paymentStatus": "confirmed",
+    "bookingDate": "2026-04-23T05:33:42.872Z",
+    "bookingRef": "BMS22422872"
+  },
+  {
+    "id": "booking-1776922817898-ozhz6xrxt",
+    "userId": "user-001",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "showId": "show-001",
+    "movieId": "movie-001",
+    "theaterId": "theater-001",
+    "seats": [
+      "A2"
+    ],
+    "totalAmount": 250,
+    "paymentStatus": "confirmed",
+    "bookingDate": "2026-04-23T05:40:17.898Z",
+    "bookingRef": "BMS22817898"
+  },
+  {
+    "id": "booking-1776925612568-8ws7vqemt",
+    "userId": "user-001",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "showId": "show-006",
+    "movieId": "movie-003",
+    "theaterId": "theater-003",
+    "seats": [
+      "D1",
+      "D2"
+    ],
+    "totalAmount": 400,
+    "paymentStatus": "confirmed",
+    "bookingDate": "2026-04-23T06:26:52.568Z",
+    "bookingRef": "BMS25612569"
+  },
+  {
+    "id": "booking-1776926018328-46tiqtr2h",
+    "userId": "user-001",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "showId": "show-007",
+    "movieId": "movie-004",
+    "theaterId": "theater-001",
+    "seats": [
+      "E6",
+      "E13",
+      "E12",
+      "E11",
+      "E10",
+      "E9",
+      "E8",
+      "E7"
+    ],
+    "totalAmount": 2400,
+    "paymentStatus": "confirmed",
+    "bookingDate": "2026-04-23T06:33:38.328Z",
+    "bookingRef": "BMS26018328"
+  }
+]

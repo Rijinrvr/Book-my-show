@@ -1,0 +1,35 @@
+[
+  {
+    "id": "theater-001",
+    "name": "PVR Cinemas - Phoenix Mall",
+    "location": "Phoenix Mall, Nungambakkam, Chennai",
+    "city": "Chennai",
+    "amenities": ["Dolby Atmos", "4K", "Recliner Seats", "Food Court"],
+    "totalSeats": 120,
+    "rows": ["A", "B", "C", "D", "E", "F", "G", "H"],
+    "seatsPerRow": 15,
+    "status": "active"
+  },
+  {
+    "id": "theater-002",
+    "name": "INOX - Forum Mall",
+    "location": "Forum Mall, Koramangala, Bengaluru",
+    "city": "Bengaluru",
+    "amenities": ["IMAX", "Dolby", "Bean Bag Seats"],
+    "totalSeats": 100,
+    "rows": ["A", "B", "C", "D", "E", "F", "G"],
+    "seatsPerRow": 14,
+    "status": "active"
+  },
+  {
+    "id": "theater-003",
+    "name": "Cinepolis - DLF Mall",
+    "location": "DLF Mall of India, Sector 18, Noida",
+    "city": "Noida",
+    "amenities": ["4DX", "Dolby Atmos", "Luxury Lounger"],
+    "totalSeats": 90,
+    "rows": ["A", "B", "C", "D", "E", "F"],
+    "seatsPerRow": 15,
+    "status": "active"
+  }
+]
