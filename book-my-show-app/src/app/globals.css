@@ -589,10 +589,94 @@ body {
   font-size: 14px;
 }
 
-/* Responsive */
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Tablet  (≤ 768px)
+═══════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .hero-title { font-size: 36px; }
-  .movies-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
-  .sidebar { width: 200px; }
+
+  /* Container */
   .container { padding: 0 16px; }
+
+  /* Navbar — hide links, show hamburger */
+  .navbar { padding: 0 16px; height: 56px; }
+  .navbar-logo { font-size: 18px; }
+  .navbar-links { gap: 4px; }
+  .navbar-links .btn-ghost { padding: 6px 10px; font-size: 13px; }
+
+  /* Section titles */
+  .section-title { font-size: 22px; }
+  .hero-title { font-size: 36px; letter-spacing: -1px; }
+  .hero-subtitle { font-size: 15px; }
+
+  /* Movies grid — 3 columns on tablet */
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* Stat cards — wrap and shrink */
+  .stat-card { padding: 16px; }
+  .stat-value { font-size: 28px; }
+
+  /* Sidebar */
+  .sidebar { width: 200px; }
+
+  /* Admin table — horizontal scroll */
+  .admin-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Seats */
+  .seat { width: 28px; height: 28px; font-size: 8px; }
+
+  /* Ticket */
+  .ticket { margin: 0 8px; }
+  .ticket-header { padding: 20px; }
+  .ticket-body { padding: 20px; }
 }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Mobile  (≤ 480px)
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* Container */
+  .container { padding: 0 12px; }
+
+  /* Navbar */
+  .navbar { padding: 0 12px; }
+  .navbar-logo { font-size: 16px; }
+
+  /* Hero */
+  .hero-title { font-size: 28px; }
+  .hero-subtitle { font-size: 14px; }
+
+  /* Movies grid — 2 columns on mobile */
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Movie card body text smaller */
+  .movie-card-title { font-size: 13px; }
+  .movie-card-body { padding: 10px; }
+
+  /* Section title */
+  .section-title { font-size: 19px; }
+
+  /* Seats smaller on mobile */
+  .seat { width: 24px; height: 24px; font-size: 7px; border-radius: 4px; }
+
+  /* Stat card */
+  .stat-card { padding: 12px 14px; }
+  .stat-value { font-size: 22px; }
+  .stat-label { font-size: 11px; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary { padding: 10px 18px; font-size: 13px; }
+
+  /* Ticket */
+  .ticket { border-radius: 14px; }
+  .ticket-header { padding: 16px; }
+  .ticket-body { padding: 16px; }
+  .ticket-divider { margin: 0 -16px; }
+}
+

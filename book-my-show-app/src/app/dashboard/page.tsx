@@ -138,7 +138,7 @@ export default function DashboardPage() {
       <Navbar />
 
       {/* ── Cinematic Hero Banner ──────────────────────────────── */}
-      <div style={{ position: 'relative', height: '520px', overflow: 'hidden' }}>
+      <div className="hero-banner" style={{ position: 'relative', overflow: 'hidden' }}>
 
         {/* Background gradient (colour per slide) */}
         <div style={{
@@ -236,7 +236,7 @@ export default function DashboardPage() {
               </p>
 
               {/* CTA Buttons */}
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <div className="hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <button
                   onClick={() => {
                     setShowTrailer(true);
@@ -444,8 +444,21 @@ export default function DashboardPage() {
         )}
       </div>
 
-      {/* Animations */}
+      {/* Animations + Responsive */}
       <style>{`
+        .hero-banner { height: 520px; }
+        .hero-content-title { font-size: clamp(24px, 5vw, 52px); }
+        .hero-tagline { font-size: 16px; }
+        .hero-cta { flex-direction: row; }
+        @media (max-width: 640px) {
+          .hero-banner { height: 420px; }
+          .hero-tagline { font-size: 13px; max-width: 90%; }
+          .hero-cta { flex-direction: column; gap: 8px; }
+          .hero-cta a, .hero-cta button { width: 100%; justify-content: center; }
+        }
+        @media (max-width: 400px) {
+          .hero-banner { height: 380px; }
+        }
         @keyframes pulse-blob {
           0%, 100% { transform: scale(1); opacity: 0.8; }
           50% { transform: scale(1.15); opacity: 1; }
