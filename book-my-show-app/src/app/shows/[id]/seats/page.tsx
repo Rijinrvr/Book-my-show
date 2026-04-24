@@ -93,24 +93,24 @@ export default function SeatSelectionPage() {
     <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }}>
       <Navbar />
 
-      <div className="container" style={{ padding: '32px 24px' }}>
+      <div className="container" style={{ padding: '24px 0' }}>
         {/* Show Info Header */}
-        <div className="glass-card" style={{ padding: '20px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
-          <div>
+        <div className="glass-card mobile-stack" style={{ padding: '20px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', gap: '16px', alignItems: 'center' }}>
+          <div style={{ width: '100%' }}>
             <h1 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px' }}>{movie?.title}</h1>
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', color: 'var(--text-secondary)', fontSize: '13px' }}>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', color: 'var(--text-secondary)', fontSize: '13px' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', whiteSpace: 'nowrap' }}>
                 <MapPin size={13} /> {theater?.name}
               </span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', whiteSpace: 'nowrap' }}>
                 <Calendar size={13} /> {show.date}
               </span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', whiteSpace: 'nowrap' }}>
                 <Clock size={13} /> {show.time}
               </span>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div style={{ display: 'flex', gap: '8px', width: '100%', justifyContent: 'flex-start' }}>
             <span className="badge badge-gray">{show.format}</span>
             <span className="badge badge-gray">{show.language}</span>
             <span className="badge badge-red">₹{show.price}/seat</span>

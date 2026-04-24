@@ -58,14 +58,14 @@ export default function HomePage() {
       {/* Features */}
       <div style={{ padding: '60px 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
             {[
               { icon: <Ticket size={24} />, title: 'Easy Booking', desc: 'Select seats, choose showtime, confirm in seconds.', color: 'var(--accent-red)' },
               { icon: <Star size={24} />, title: 'Best Movies', desc: 'Latest blockbusters across top theaters nationwide.', color: 'var(--accent-gold)' },
               { icon: <Shield size={24} />, title: 'Secure Payments', desc: 'Safe and encrypted transactions every time.', color: '#22c55e' },
               { icon: <Zap size={24} />, title: 'Instant Confirmation', desc: 'Get your e-ticket immediately after booking.', color: '#3b82f6' },
             ].map(({ icon, title, desc, color }) => (
-              <div key={title} className="glass-card" style={{ padding: '28px', textAlign: 'center' }}>
+              <div key={title} className="glass-card" style={{ padding: '28px', textAlign: 'center', height: '100%' }}>
                 <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', color, margin: '0 auto 16px' }}>
                   {icon}
                 </div>
@@ -107,9 +107,9 @@ export default function HomePage() {
       )}
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '32px 0', background: 'var(--bg-secondary)' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          <div>
+      <footer style={{ borderTop: '1px solid var(--border)', padding: '40px 0', background: 'var(--bg-secondary)' }}>
+        <div className="container mobile-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px' }}>
+          <div style={{ textAlign: 'inherit' }}>
             <div style={{ fontSize: '18px', fontWeight: 800, background: 'linear-gradient(135deg, var(--accent-red), #ff6b7a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '4px' }}>
               🎬 BookMyShow
             </div>

@@ -72,60 +72,62 @@ export default function AdminTheatersPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '28px', gap: '16px' }} className="mobile-stack">
         <div>
           <h1 className="section-title" style={{ marginBottom: '4px' }}>Theaters</h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>{theaters.length} theater(s) registered</p>
         </div>
-        <button className="btn-primary" onClick={openAdd}><Plus size={16} /> Add Theater</button>
+        <button className="btn-primary" onClick={openAdd} style={{ width: 'auto' }}><Plus size={16} /> Add Theater</button>
       </div>
 
       {loading ? (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '60px' }}><div className="spinner" /></div>
       ) : (
-        <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '16px', overflow: 'hidden' }}>
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>City</th>
-                <th>Seats</th>
-                <th>Rows</th>
-                <th>Amenities</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {theaters.map((t) => (
-                <tr key={t.id}>
-                  <td>
-                    <div style={{ fontWeight: 600 }}>{t.name}</div>
-                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
-                      <MapPin size={11} /> {t.location}
-                    </div>
-                  </td>
-                  <td>{t.city}</td>
-                  <td style={{ fontWeight: 700, color: 'var(--accent-red)' }}>{t.totalSeats}</td>
-                  <td style={{ color: 'var(--text-secondary)' }}>{t.rows.join(', ')}</td>
-                  <td>
-                    <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                      {t.amenities.slice(0, 2).map((a) => <span key={a} className="badge badge-gray" style={{ fontSize: '10px' }}>{a}</span>)}
-                    </div>
-                  </td>
-                  <td>
-                    <div style={{ display: 'flex', gap: '6px' }}>
-                      <button className="btn-ghost" style={{ padding: '6px 10px', color: '#3b82f6' }} onClick={() => openEdit(t)}>
-                        <Pencil size={14} />
-                      </button>
-                      <button className="btn-ghost" style={{ padding: '6px 10px', color: '#ef4444' }} onClick={() => handleDelete(t.id)}>
-                        <Trash2 size={14} />
-                      </button>
-                    </div>
-                  </td>
+        <div className="admin-table-wrapper">
+          <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '16px', overflow: 'hidden', minWidth: '800px' }}>
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>City</th>
+                  <th>Seats</th>
+                  <th>Rows</th>
+                  <th>Amenities</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {theaters.map((t) => (
+                  <tr key={t.id}>
+                    <td>
+                      <div style={{ fontWeight: 600 }}>{t.name}</div>
+                      <div style={{ fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
+                        <MapPin size={11} /> {t.location}
+                      </div>
+                    </td>
+                    <td>{t.city}</td>
+                    <td style={{ fontWeight: 700, color: 'var(--accent-red)' }}>{t.totalSeats}</td>
+                    <td style={{ color: 'var(--text-secondary)' }}>{t.rows.join(', ')}</td>
+                    <td>
+                      <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                        {t.amenities.slice(0, 2).map((a) => <span key={a} className="badge badge-gray" style={{ fontSize: '10px' }}>{a}</span>)}
+                      </div>
+                    </td>
+                    <td>
+                      <div style={{ display: 'flex', gap: '6px' }}>
+                        <button className="btn-ghost" style={{ padding: '6px 10px', color: '#3b82f6' }} onClick={() => openEdit(t)}>
+                          <Pencil size={14} />
+                        </button>
+                        <button className="btn-ghost" style={{ padding: '6px 10px', color: '#ef4444' }} onClick={() => handleDelete(t.id)}>
+                          <Trash2 size={14} />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 

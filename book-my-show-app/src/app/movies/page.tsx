@@ -77,9 +77,9 @@ export default function MoviesPage() {
         </div>
       </div>
 
-      <div className="container" style={{ padding: '32px 24px' }}>
+      <div className="container" style={{ padding: '32px 0' }}>
         {/* Search & Filter Bar */}
-        <div style={{ display: 'flex', gap: '12px', marginBottom: '32px', flexWrap: 'wrap' }}>
+        <div className="mobile-stack" style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
 
           {/* Search Input */}
           <div style={{ position: 'relative', flex: '1', minWidth: '240px' }}>

@@ -30,7 +30,7 @@ export default function Navbar() {
         </Link>
 
         {/* ── Desktop links ── */}
-        <div className="navbar-links" style={{ display: 'flex' }} id="desktop-nav">
+        <div className="navbar-links" id="desktop-nav">
           {user ? (
             <>
               <Link href="/movies" className={`btn-ghost${isActive('/movies') ? ' nav-active' : ''}`}>
@@ -108,28 +108,30 @@ export default function Navbar() {
             onClick={(e) => e.stopPropagation()}
             style={{
               position: 'absolute',
-              top: '56px',
+              top: '60px',
               left: 0,
               right: 0,
-              background: '#0f0f1a',
+              background: '#0a0a0f',
               borderBottom: '1px solid var(--border)',
-              padding: '12px 16px 20px',
+              padding: '16px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '4px',
+              gap: '6px',
               boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+              maxHeight: 'calc(100vh - 60px)',
+              overflowY: 'auto'
             }}
           >
             {user ? (
               <>
                 {/* User pill */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 14px', marginBottom: '6px', background: 'rgba(255,255,255,0.04)', borderRadius: '10px', border: '1px solid var(--border)' }}>
-                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(229,9,20,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <User size={15} color="var(--accent-red)" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', marginBottom: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(229,9,20,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <User size={18} color="var(--accent-red)" />
                   </div>
-                  <div>
-                    <p style={{ fontSize: '14px', fontWeight: 700 }}>{user.name}</p>
-                    <p style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{user.email}</p>
+                  <div style={{ overflow: 'hidden' }}>
+                    <p style={{ fontSize: '15px', fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{user.name}</p>
+                    <p style={{ fontSize: '12px', color: 'var(--text-muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{user.email}</p>
                   </div>
                 </div>
 
@@ -152,20 +154,20 @@ export default function Navbar() {
                   </>
                 )}
 
-                <div style={{ height: '1px', background: 'var(--border)', margin: '8px 0' }} />
+                <div style={{ height: '1px', background: 'var(--border)', margin: '12px 0' }} />
 
                 <button
                   onClick={handleLogout}
-                  style={{ ...navItemStyle(false), color: '#ef4444', background: 'rgba(239,68,68,0.07)', border: '1px solid rgba(239,68,68,0.2)', cursor: 'pointer', width: '100%', textAlign: 'left' }}
+                  style={{ ...navItemStyle(false), color: '#ef4444', background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.15)', cursor: 'pointer', width: '100%', textAlign: 'left' }}
                 >
                   <LogOut size={18} /> Logout
                 </button>
               </>
             ) : (
-              <>
-                <Link href="/login" onClick={close} style={{ ...navItemStyle(false), marginBottom: '4px' }}>Login</Link>
-                <Link href="/register" onClick={close} className="btn-primary" style={{ justifyContent: 'center' }}>Sign Up</Link>
-              </>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '10px' }}>
+                <Link href="/login" onClick={close} className="btn-secondary" style={{ justifyContent: 'center', padding: '14px' }}>Login</Link>
+                <Link href="/register" onClick={close} className="btn-primary" style={{ justifyContent: 'center', padding: '14px' }}>Sign Up</Link>
+              </div>
             )}
           </div>
         </div>
@@ -178,13 +180,9 @@ export default function Navbar() {
           background: rgba(229,9,20,0.08) !important;
           border-radius: 8px;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           #desktop-nav { display: none !important; }
           .hamburger-btn { display: flex !important; }
-        }
-        @media (max-width: 400px) {
-          .user-name-label { display: none; }
-          .logout-label { display: none; }
         }
       `}</style>
     </>

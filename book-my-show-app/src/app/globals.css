@@ -313,7 +313,7 @@ body {
 /* Grid */
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 24px;
 }
 
@@ -591,87 +591,95 @@ body {
 
 /* ═══════════════════════════════════════════
    RESPONSIVE — Tablet  (≤ 768px)
-═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
 @media (max-width: 768px) {
-
   /* Container */
-  .container { padding: 0 16px; }
+  .container { padding: 0 20px; }
 
   /* Navbar — hide links, show hamburger */
-  .navbar { padding: 0 16px; height: 56px; }
-  .navbar-logo { font-size: 18px; }
+  .navbar { padding: 0 16px; height: 60px; }
+  .navbar-logo { font-size: 20px; }
   .navbar-links { gap: 4px; }
   .navbar-links .btn-ghost { padding: 6px 10px; font-size: 13px; }
 
   /* Section titles */
-  .section-title { font-size: 22px; }
-  .hero-title { font-size: 36px; letter-spacing: -1px; }
-  .hero-subtitle { font-size: 15px; }
+  .section-title { font-size: 24px; }
+  .hero-title { font-size: 42px; letter-spacing: -1px; }
+  .hero-subtitle { font-size: 16px; }
 
-  /* Movies grid — 3 columns on tablet */
+  /* Movies grid — 2 columns on tablet if cards are large, or auto-fit */
   .movies-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
   }
 
   /* Stat cards — wrap and shrink */
-  .stat-card { padding: 16px; }
-  .stat-value { font-size: 28px; }
+  .stat-card { padding: 20px; }
+  .stat-value { font-size: 32px; }
 
   /* Sidebar */
-  .sidebar { width: 200px; }
+  .sidebar { width: 100%; height: auto; min-height: auto; border-right: none; border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; padding: 12px 0; }
+  .sidebar-item { padding: 8px 20px; border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .sidebar-item.active { border-left-color: transparent; border-bottom-color: var(--accent-red); }
 
   /* Admin table — horizontal scroll */
-  .admin-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .admin-table-wrapper { 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    margin: 0 -20px; 
+    padding: 0 20px;
+    width: calc(100% + 40px);
+  }
 
   /* Seats */
-  .seat { width: 28px; height: 28px; font-size: 8px; }
+  .seat { width: 30px; height: 30px; font-size: 8px; }
 
   /* Ticket */
-  .ticket { margin: 0 8px; }
-  .ticket-header { padding: 20px; }
-  .ticket-body { padding: 20px; }
+  .ticket { margin: 0; border-radius: 0; border-left: none; border-right: none; }
 }
 
 /* ═══════════════════════════════════════════
    RESPONSIVE — Mobile  (≤ 480px)
-═══════════════════════════════════════════ */
+   ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-
   /* Container */
-  .container { padding: 0 12px; }
+  .container { padding: 0 16px; }
 
   /* Navbar */
-  .navbar { padding: 0 12px; }
-  .navbar-logo { font-size: 16px; }
+  .navbar { padding: 0 12px; height: 56px; }
+  .navbar-logo { font-size: 18px; }
 
   /* Hero */
-  .hero-title { font-size: 28px; }
+  .hero-title { font-size: 32px; }
   .hero-subtitle { font-size: 14px; }
 
   /* Movies grid — 2 columns on mobile */
   .movies-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
   }
 
   /* Movie card body text smaller */
-  .movie-card-title { font-size: 13px; }
-  .movie-card-body { padding: 10px; }
+  .movie-card-title { font-size: 14px; }
+  .movie-card-body { padding: 12px; }
 
   /* Section title */
-  .section-title { font-size: 19px; }
+  .section-title { font-size: 20px; }
 
   /* Seats smaller on mobile */
-  .seat { width: 24px; height: 24px; font-size: 7px; border-radius: 4px; }
+  .seat { width: 26px; height: 26px; font-size: 7px; border-radius: 4px; }
+
+  /* Stat grid */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
 
   /* Stat card */
-  .stat-card { padding: 12px 14px; }
-  .stat-value { font-size: 22px; }
-  .stat-label { font-size: 11px; }
+  .stat-card { padding: 16px; }
+  .stat-value { font-size: 28px; }
+  .stat-label { font-size: 12px; }
 
   /* Buttons */
-  .btn-primary, .btn-secondary { padding: 10px 18px; font-size: 13px; }
 
   /* Ticket */
   .ticket { border-radius: 14px; }
